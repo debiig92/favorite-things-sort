@@ -1,10 +1,10 @@
-export type keyProps = keyof FavoriteThings;
+export type keyProps = keyof Person;
 
 export enum StatusType {
   Active = 'Active', Inactive = 'Inactive'
 };
 
-export interface FavoriteThings {
+export interface Person {
     Name: string
     "Favorite Food": string
     "Favorite Movie": string

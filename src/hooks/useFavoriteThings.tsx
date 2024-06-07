@@ -1,16 +1,16 @@
 import { favoriteThigsConstant } from "../helpers/FavoriteThingsList";
-import { FavoriteThings, keyProps } from "../interfaces/FavoriteThings";
+import { Person, keyProps } from "../interfaces/Person";
 
 const useFavoriteThings = () => {
 
-    let favoriteThingsList: FavoriteThings[] = [...favoriteThigsConstant]
+    let favoriteThingsList: Person[] = [...favoriteThigsConstant]
     const favoriteThingsKeys: keyProps[] = Object.keys(favoriteThingsList[0]) as unknown as keyProps[];
-    const printFavoriteThings = (favoriteThing: FavoriteThings, property: keyof FavoriteThings) => {
+    const printFavoriteThings = (favoriteThing: Person, property: keyof Person) => {
       return favoriteThing[property]
     }
 
 
-    const sortFavoriteThings = (property: keyof FavoriteThings) => {
+    const sortFavoriteThings = (property: keyof Person) => {
         return property ? [...favoriteThingsList].sort((a,b) => a[property]!.toLocaleString().localeCompare(b[property]!.toLocaleString())  ) : []
     }
   

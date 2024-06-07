@@ -1,6 +1,6 @@
 import { ChangeEvent, useLayoutEffect, useState } from "react"
 import useFavoriteThings from "../hooks/useFavoriteThings"
-import { FavoriteThings, StatusType, keyProps } from "../interfaces/FavoriteThings"
+import { Person, StatusType, keyProps } from "../interfaces/Person"
 import { formatDate } from "../helpers/Helpers"
 
 const FavoriteThingsTable = () => {
@@ -57,7 +57,7 @@ const FavoriteThingsTable = () => {
 
 
                     {
-                      listFavoriteThings.map((favorite: FavoriteThings) => (
+                      listFavoriteThings.map((favorite: Person) => (
                         <tr key={favorite.Name}>
                           <td className="p-2 whitespace-nowrap">
                             <div className="flex items-center">
