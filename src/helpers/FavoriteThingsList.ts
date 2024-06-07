@@ -10,7 +10,7 @@ let rockyObj: Person = {
     'Name': 'Miroslav',
     'Favorite Food': 'Sushi',
     'Favorite Movie': 'American Psycho',
-    'Status': StatusType.Active,
+    'Status': StatusType.Inactive,
   }
   let donnyObj: Person  = {
     'Name': 'Donny',
