@@ -1,5 +1,6 @@
 import { favoriteThigsConstant } from "../helpers/FavoriteThingsList";
-import { Person, keyProps } from "../interfaces/Person";
+import { formatDate } from "../helpers/Helpers";
+import { Person, StatusType, keyProps } from "../interfaces/Person";
 
 const useFavoriteThings = () => {
 
@@ -9,13 +10,18 @@ const useFavoriteThings = () => {
       return favoriteThing[property]
     }
 
+    const printOnlyActivePersons = (favoriteThingsList: Person[]) => {
+      return favoriteThingsList.filter((elem) => elem.Status === StatusType.Active).map((el) => (
+        { Name: el.Name ,createdAt: formatDate(el.createdAt) , "Favorite Movie" : el["Favorite Movie"]}
+      ))
+    }
 
     const sortFavoriteThings = (property: keyof Person) => {
         return property ? [...favoriteThingsList].sort((a,b) => a[property]!.toLocaleString().localeCompare(b[property]!.toLocaleString())  ) : []
     }
   
   return {
-    favoriteThingsList , favoriteThingsKeys, printFavoriteThings,sortFavoriteThings
+    favoriteThingsList , favoriteThingsKeys, printFavoriteThings,sortFavoriteThings, printOnlyActivePersons
   }
 }
 

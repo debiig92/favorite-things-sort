@@ -5,7 +5,7 @@ import { formatDate } from "../helpers/Helpers"
 
 const FavoriteThingsTable = () => {
 
-  const {favoriteThingsList , favoriteThingsKeys , printFavoriteThings, sortFavoriteThings} = useFavoriteThings()
+  const {favoriteThingsList , favoriteThingsKeys , printFavoriteThings, sortFavoriteThings, printOnlyActivePersons} = useFavoriteThings()
 
   const [listFavoriteThings, setListFavoriteThings] = useState([...favoriteThingsList])
 
@@ -14,12 +14,12 @@ const FavoriteThingsTable = () => {
     
     const sort = property ? sortFavoriteThings(property) : [];
 
-    setListFavoriteThings(sort.length > 0 && property ? sort : [...favoriteThingsList])
+    setListFavoriteThings(sort.length > 0 && property ? sort : [...listFavoriteThings])
   }
 
   useLayoutEffect(() => {
     sortFavoriteThings(favoriteThingsKeys[0])
-    console.log("Active Elements: " , listFavoriteThings.filter((elem) => elem.Status === StatusType.Active))
+    console.log("Active Elements: " ,  printOnlyActivePersons(favoriteThingsList))
   }, [])
 
   return (
