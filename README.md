@@ -2,6 +2,10 @@
 
 This is a React project developed with React 18, TailwindCSS, and Vite. This project displays a list of people's favorite things, which can be sorted by the properties of the object provided in the Code Challenge gist.
 
+## DEMO
+You can test a Demo in this link:
+
+https://favorite-things-sort.vercel.app/
 
 
 ## Technologies Used
