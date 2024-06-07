@@ -1,6 +1,8 @@
 # Favorite Things List Project
 
-This is a React project developed with React 18, TailwindCSS, and Vite. This project displays a list of people's favorite things, which can be sorted by the properties of the object provided in this gist.
+This is a React project developed with React 18, TailwindCSS, and Vite. This project displays a list of people's favorite things, which can be sorted by the properties of the object provided in the Code Challenge gist.
+
+
 
 ## Technologies Used
 
@@ -13,8 +15,9 @@ This is a React project developed with React 18, TailwindCSS, and Vite. This pro
 Follow these steps to install the project:
 
 1. Clone the repository:
-
+``
 git clone <repository-url>
+``
 
 2. Navigate to the project directory:
 
