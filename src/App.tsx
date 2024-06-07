@@ -1,10 +1,10 @@
-import FavoriteThings from "./components/FavoriteThings"
+import FavoriteThingsTable from "./components/FavoriteThingsTable"
 
 function App() {
 
   return (
     <>
-      <FavoriteThings />
+      <FavoriteThingsTable />
     </>
   )
 }
